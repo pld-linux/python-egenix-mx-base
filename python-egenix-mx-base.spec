@@ -15,6 +15,7 @@ License:	distributable
 Group:		Libraries/Python
 # Source0:	http://www.lemburg.com/python/%{module}-%{version}.tar.gz
 Source0:	http://www.egenix.com/files/python/%{module}-%{version}.%{fn_sufix}.tar.gz
+# Source0-md5:	4d062e7b644edbe7e9ae8698e23e60f1
 # URL:		http://www.lemburg.com/python/eGenix-mx-Extensions.html
 URL:		http://www.egenix.com/mailman-archives/egenix-users/2002-August/000078.html
 BuildRequires:	python-devel >= 2.2.2
