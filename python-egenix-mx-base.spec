@@ -203,97 +203,80 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz mx/*.gz mx/Doc/*.gz mx/Doc/mx{Extensions,License}.html
-%{mxdir}/*.pyc
-%{mxdir}/*.pyo
+%{mxdir}/*.py?
 
 %dir %{mxdir}/Misc
-%{mxdir}/Misc/*.pyc
-%{mxdir}/Misc/*.pyo
+%{mxdir}/Misc/*.py?
 
 %files -n python-mx-DateTime
 %defattr(644,root,root,755)
 %doc mx/DateTime/Doc/*.html
 %dir %{mxdir}/DateTime
-%{mxdir}/DateTime/*.pyc
-%{mxdir}/DateTime/*.pyo
+%{mxdir}/DateTime/*.py?
 
 %dir %{mxdir}/DateTime/mxDateTime
-%{mxdir}/DateTime/mxDateTime/*.pyc
-%{mxdir}/DateTime/mxDateTime/*.pyo
+%{mxdir}/DateTime/mxDateTime/*.py?
 %attr(755,root,root) %{mxdir}/DateTime/mxDateTime/*.so
 
 %files -n python-mx-TextTools
 %defattr(644,root,root,755)
 %doc mx/TextTools/Doc/*.html
 %dir %{mxdir}/TextTools
-%{mxdir}/TextTools/*.pyc
-%{mxdir}/TextTools/*.pyo
+%{mxdir}/TextTools/*.py?
 
 %dir %{mxdir}/TextTools/mxTextTools
-%{mxdir}/TextTools/mxTextTools/*.pyc
-%{mxdir}/TextTools/mxTextTools/*.pyo
+%{mxdir}/TextTools/mxTextTools/*.py?
 %attr(755,root,root) %{mxdir}/TextTools/mxTextTools/*.so
 
 %dir %{mxdir}/TextTools/Constants
-%{mxdir}/TextTools/Constants/*.pyc
-%{mxdir}/TextTools/Constants/*.pyo
+%{mxdir}/TextTools/Constants/*.py?
 
 %files -n python-mx-Stack
 %defattr(644,root,root,755)
 %doc mx/Stack/Doc/*.html
 %dir %{mxdir}/Stack
-%{mxdir}/Stack/*.pyc
-%{mxdir}/Stack/*.pyo
+%{mxdir}/Stack/*.py?
 
 %dir %{mxdir}/Stack/mxStack
-%{mxdir}/Stack/mxStack/*.pyc
-%{mxdir}/Stack/mxStack/*.pyo
+%{mxdir}/Stack/mxStack/*.py?
 %attr(755,root,root) %{mxdir}/Stack/mxStack/*.so
 
 %files -n python-mx-Queue
 %defattr(644,root,root,755)
 %doc mx/Queue/Doc/*.html
 %dir %{mxdir}/Queue
-%{mxdir}/Queue/*.pyc
-%{mxdir}/Queue/*.pyo
+%{mxdir}/Queue/*.py?
 
 %dir %{mxdir}/Queue/mxQueue
-%{mxdir}/Queue/mxQueue/*.pyc
-%{mxdir}/Queue/mxQueue/*.pyo
+%{mxdir}/Queue/mxQueue/*.py?
 %attr(755,root,root) %{mxdir}/Queue/mxQueue/*.so
 
 %files -n python-mx-Tools
 %defattr(644,root,root,755)
 %doc mx/Tools/Doc/*.html
 %dir %{mxdir}/Tools
-%{mxdir}/Tools/*.pyc
-%{mxdir}/Tools/*.pyo
+%{mxdir}/Tools/*.py?
 
 %dir %{mxdir}/Tools/mxTools
-%{mxdir}/Tools/mxTools/*.pyc
-%{mxdir}/Tools/mxTools/*.pyo
+%{mxdir}/Tools/mxTools/*.py?
 %attr(755,root,root) %{mxdir}/Tools/mxTools/*.so
 
 %files -n python-mx-Proxy
 %defattr(644,root,root,755)
 %doc mx/Proxy/Doc/*.html
 %dir %{mxdir}/Proxy
-%{mxdir}/Proxy/*.pyc
-%{mxdir}/Proxy/*.pyo
+%{mxdir}/Proxy/*.py?
 
 %dir %{mxdir}/Proxy/mxProxy
-%{mxdir}/Proxy/mxProxy/*.pyc
-%{mxdir}/Proxy/mxProxy/*.pyo
+%{mxdir}/Proxy/mxProxy/*.py?
 %attr(755,root,root) %{mxdir}/Proxy/mxProxy/*.so
 
 %files -n python-mx-BeeBase
 %defattr(644,root,root,755)
 %doc mx/BeeBase/Doc/*.html
 %dir %{mxdir}/BeeBase
-%{mxdir}/BeeBase/*.pyc
-%{mxdir}/BeeBase/*.pyo
+%{mxdir}/BeeBase/*.py?
 
 %dir %{mxdir}/BeeBase/mxBeeBase
-%{mxdir}/BeeBase/mxBeeBase/*.pyc
-%{mxdir}/BeeBase/mxBeeBase/*.pyo
+%{mxdir}/BeeBase/mxBeeBase/*.py?
 %attr(755,root,root) %{mxdir}/BeeBase/mxBeeBase/*.so
