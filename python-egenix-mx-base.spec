@@ -7,14 +7,14 @@ Summary:	eGenix mx-Extensions for Python - BASE package
 Name:		python-%{module}
 Version:	2.0.1
 Release:	1
-URL:		http://www.lemburg.com/python/eGenix-mx-Extensions.html
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
 License:	Distributable
 Source0:	http://www.lemburg.com/python/%{module}-%{version}.tar.gz
-Requires:	python
-BuildRequires:	python-devel
+URL:		http://www.lemburg.com/python/eGenix-mx-Extensions.html
+BuildRequires:	python-devel >= 2.1
+%requires_eq	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,8 +28,8 @@ and is needed by all other add-on packages of the series.
 This software is brought to you by eGenix.com and distributed under
 the eGenix.com Public License.
 
-%description -l pl
-N/A
+#%description -l pl
+#N/A
 
 %package -n python-mx-DateTime
 Summary:	Date and time Python extension
@@ -37,6 +37,7 @@ Summary(pl):	Obiekty daty i czasu dla jêzyka Python
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
+%requires_eq	python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-DateTime
@@ -58,8 +59,8 @@ build upon. This is especially interesting for database applications
 which often have to deal with date/time values (the mxODBC package is
 one example of an extension using this interface).
 
-%description -l pl -n python-mx-DateTime
-N/A
+#%description -l pl -n python-mx-DateTime
+#N/A
 
 %package -n python-mx-TextTools
 Summary:	Efficient text manipulation extensions for Python
@@ -67,6 +68,7 @@ Summary(pl):	Wydajne manipulowanie tekstem w jêzyku Python
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
+%requires_eq	python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-TextTools
@@ -83,8 +85,8 @@ Applications include parsing structured text, finding and extracting
 text (either exact or using translation tables) and recombining
 strings to form new text.
 
-%description -l pl -n python-mx-TextTools
-N/A
+#%description -l pl -n python-mx-TextTools
+#N/A
 
 %package -n python-mx-Stack
 Summary:	Stack implementation for Python
@@ -92,6 +94,7 @@ Summary(pl):	Implementacja stosu dla jêzyka Python
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
+%requires_eq	python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-Stack
@@ -100,8 +103,8 @@ Stack. It works much like what you would expect from such a type,
 having .push() and .pop() methods and focusses on obtaining maximum
 speed at low memory costs.
 
-%description -l pl -n python-mx-Stack
-N/A
+#%description -l pl -n python-mx-Stack
+#N/A
 
 %package -n python-mx-Queue
 Summary:	Queue implementation for Python
@@ -109,19 +112,21 @@ Summary(pl):	Implementacja kolejki dla jêzyka Python
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
+%requires_eq	python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-Queue
 N/A    Will be available in next package version (2.0.2? 2.0.3?).
 
-%description -l pl -n python-mx-Queue
-N/A
+#%description -l pl -n python-mx-Queue
+#N/A
 
 %package -n python-mx-Tools
 Summary:	Some handy functions and objects which provides new builtins for Python
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
+%requires_eq	python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-Tools
@@ -136,14 +141,15 @@ line import mx.Tools.NewBuiltins to your site.py script and they will
 be available to all users at your site as if they were installed in
 the Python interpreter itself.
 
-%description -l pl -n python-mx-Tools
-N/A
+#%description -l pl -n python-mx-Tools
+#N/A
 
 %package -n python-mx-Proxy
 Summary:	Support for Bastion like implementations for Python
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
+%requires_eq	python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-Proxy
@@ -161,14 +167,15 @@ The latest version adds a very interesting new feature: weak
 references which help you work with circular references in a way that
 doesn't cause memory leakage in a Python system.
 
-%description -l pl -n python-mx-Proxy
-N/A
+#%description -l pl -n python-mx-Proxy
+#N/A
 
 %package -n python-mx-BeeBase
 Summary:	High performance construction kit for disk based indexed databases (B+Tree)
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
+%requires_eq	python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-BeeBase
@@ -207,80 +214,80 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz mx/*.gz mx/Doc/*.gz mx/Doc/mx{Extensions,License}.html
 %dir %{mxdir}
-%{mxdir}/*.py?
+%{mxdir}/*.py[co]
 
 %dir %{mxdir}/Misc
-%{mxdir}/Misc/*.py?
+%{mxdir}/Misc/*.py[co]
 
 %files -n python-mx-DateTime
 %defattr(644,root,root,755)
 %doc mx/DateTime/Doc/*.html
 %dir %{mxdir}/DateTime
-%{mxdir}/DateTime/*.py?
+%{mxdir}/DateTime/*.py[co]
 
 %dir %{mxdir}/DateTime/mxDateTime
-%{mxdir}/DateTime/mxDateTime/*.py?
+%{mxdir}/DateTime/mxDateTime/*.py[co]
 %attr(755,root,root) %{mxdir}/DateTime/mxDateTime/*.so
 
 %files -n python-mx-TextTools
 %defattr(644,root,root,755)
 %doc mx/TextTools/Doc/*.html
 %dir %{mxdir}/TextTools
-%{mxdir}/TextTools/*.py?
+%{mxdir}/TextTools/*.py[co]
 
 %dir %{mxdir}/TextTools/mxTextTools
-%{mxdir}/TextTools/mxTextTools/*.py?
+%{mxdir}/TextTools/mxTextTools/*.py[co]
 %attr(755,root,root) %{mxdir}/TextTools/mxTextTools/*.so
 
 %dir %{mxdir}/TextTools/Constants
-%{mxdir}/TextTools/Constants/*.py?
+%{mxdir}/TextTools/Constants/*.py[co]
 
 %files -n python-mx-Stack
 %defattr(644,root,root,755)
 %doc mx/Stack/Doc/*.html
 %dir %{mxdir}/Stack
-%{mxdir}/Stack/*.py?
+%{mxdir}/Stack/*.py[co]
 
 %dir %{mxdir}/Stack/mxStack
-%{mxdir}/Stack/mxStack/*.py?
+%{mxdir}/Stack/mxStack/*.py[co]
 %attr(755,root,root) %{mxdir}/Stack/mxStack/*.so
 
 %files -n python-mx-Queue
 %defattr(644,root,root,755)
 %doc mx/Queue/Doc/*.html
 %dir %{mxdir}/Queue
-%{mxdir}/Queue/*.py?
+%{mxdir}/Queue/*.py[co]
 
 %dir %{mxdir}/Queue/mxQueue
-%{mxdir}/Queue/mxQueue/*.py?
+%{mxdir}/Queue/mxQueue/*.py[co]
 %attr(755,root,root) %{mxdir}/Queue/mxQueue/*.so
 
 %files -n python-mx-Tools
 %defattr(644,root,root,755)
 %doc mx/Tools/Doc/*.html
 %dir %{mxdir}/Tools
-%{mxdir}/Tools/*.py?
+%{mxdir}/Tools/*.py[co]
 
 %dir %{mxdir}/Tools/mxTools
-%{mxdir}/Tools/mxTools/*.py?
+%{mxdir}/Tools/mxTools/*.py[co]
 %attr(755,root,root) %{mxdir}/Tools/mxTools/*.so
 
 %files -n python-mx-Proxy
 %defattr(644,root,root,755)
 %doc mx/Proxy/Doc/*.html
 %dir %{mxdir}/Proxy
-%{mxdir}/Proxy/*.py?
+%{mxdir}/Proxy/*.py[co]
 
 %dir %{mxdir}/Proxy/mxProxy
-%{mxdir}/Proxy/mxProxy/*.py?
+%{mxdir}/Proxy/mxProxy/*.py[co]
 %attr(755,root,root) %{mxdir}/Proxy/mxProxy/*.so
 
 %files -n python-mx-BeeBase
 %defattr(644,root,root,755)
 %doc mx/BeeBase/Doc/*.html
 %dir %{mxdir}/BeeBase
-%{mxdir}/BeeBase/*.py?
+%{mxdir}/BeeBase/*.py[co]
 
 %dir %{mxdir}/BeeBase/mxBeeBase
-%{mxdir}/BeeBase/mxBeeBase/*.py?
+%{mxdir}/BeeBase/mxBeeBase/*.py[co]
 %attr(755,root,root) %{mxdir}/BeeBase/mxBeeBase/*.so
