@@ -1,8 +1,7 @@
 
 %define module egenix-mx-base
 %define python_sitepkgsdir %(echo `python -c "import sys; print (sys.prefix + '/lib/python' + sys.version[:3] + '/site-packages/')"`)
-%define python_compile_opt python -O -c "import compileall; compileall.compile_dir('.')"
-%define python_compile python -c "import compileall; compileall.compile_dir('.')"
+%define mxdir %{python_sitepkgsdir}/mx
 
 Summary:	eGenix mx-Extensions for Python - BASE package
 Name:		python-%{module}
@@ -14,6 +13,8 @@ Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
 License:	Distributable
 Source0:	http://www.lemburg.com/python/%{module}-%{version}.tar.gz
+Requires:	python
+BuildRequires:	python-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -99,6 +100,20 @@ speed at low memory costs.
 %description -l pl -n python-mx-Stack
 N/A
 
+%package -n python-mx-Queue
+Summary:	Queue implementation for Python
+Summary(pl):	Implementacja stosu dla jêzyka Python
+Group:		Development/Languages/Python
+Group(de):	Entwicklung/Sprachen/Python
+Group(pl):	Programowanie/Jêzyki/Python
+Requires:	python-%{module} = %{version}
+
+%description -n python-mx-Queue
+N/A
+
+%description -l pl -n python-mx-Queue
+N/A
+
 %package -n python-mx-Tools
 Summary:	Some handy functions and objects which provides new builtins for Python
 Group:		Development/Languages/Python
@@ -180,29 +195,105 @@ env CFLAGS="%{rpmcflags}" python setup.py build
 rm -rf $RPM_BUILD_ROOT
 python setup.py install --root=$RPM_BUILD_ROOT
 
-gzip -9nf README
+gzip -9nf README mx/LICENSE mx/COPYRIGHT mx/Doc/*.txt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README mx/Doc mx/DateTime/Doc mx/Proxy/Doc mx/BeeBase/Doc mx/Queue/Doc mx/Stack/Doc mx/TextTools/Doc mx/Tools/Doc mx/DateTime/LICENSE mx/DateTime/COPYRIGHT
+%doc *.gz mx/*.gz mx/Doc/*.gz mx/Doc/mx{Extensions,License}.html
+%{mxdir}/*.pyc
+%{mxdir}/*.pyo
+
+%dir %{mxdir}/Misc
+%{mxdir}/Misc/*.pyc
+%{mxdir}/Misc/*.pyo
 
 %files -n python-mx-DateTime
 %defattr(644,root,root,755)
+%doc mx/DateTime/Doc/*.html
+%dir %{mxdir}/DateTime
+%{mxdir}/DateTime/*.pyc
+%{mxdir}/DateTime/*.pyo
+
+%dir %{mxdir}/DateTime/mxDateTime
+%{mxdir}/DateTime/mxDateTime/*.pyc
+%{mxdir}/DateTime/mxDateTime/*.pyo
+%attr(755,root,root) %{mxdir}/DateTime/mxDateTime/*.so
 
 %files -n python-mx-TextTools
 %defattr(644,root,root,755)
+%doc mx/TextTools/Doc/*.html
+%dir %{mxdir}/TextTools
+%{mxdir}/TextTools/*.pyc
+%{mxdir}/TextTools/*.pyo
+
+%dir %{mxdir}/TextTools/mxTextTools
+%{mxdir}/TextTools/mxTextTools/*.pyc
+%{mxdir}/TextTools/mxTextTools/*.pyo
+%attr(755,root,root) %{mxdir}/TextTools/mxTextTools/*.so
+
+%dir %{mxdir}/TextTools/Constants
+%{mxdir}/TextTools/Constants/*.pyc
+%{mxdir}/TextTools/Constants/*.pyo
 
 %files -n python-mx-Stack
 %defattr(644,root,root,755)
+%doc mx/Stack/Doc/*.html
+%dir %{mxdir}/Stack
+%{mxdir}/Stack/*.pyc
+%{mxdir}/Stack/*.pyo
+
+%dir %{mxdir}/Stack/mxStack
+%{mxdir}/Stack/mxStack/*.pyc
+%{mxdir}/Stack/mxStack/*.pyo
+%attr(755,root,root) %{mxdir}/Stack/mxStack/*.so
+
+%files -n python-mx-Queue
+%defattr(644,root,root,755)
+%doc mx/Queue/Doc/*.html
+%dir %{mxdir}/Queue
+%{mxdir}/Queue/*.pyc
+%{mxdir}/Queue/*.pyo
+
+%dir %{mxdir}/Queue/mxQueue
+%{mxdir}/Queue/mxQueue/*.pyc
+%{mxdir}/Queue/mxQueue/*.pyo
+%attr(755,root,root) %{mxdir}/Queue/mxQueue/*.so
 
 %files -n python-mx-Tools
 %defattr(644,root,root,755)
+%doc mx/Tools/Doc/*.html
+%dir %{mxdir}/Tools
+%{mxdir}/Tools/*.pyc
+%{mxdir}/Tools/*.pyo
+
+%dir %{mxdir}/Tools/mxTools
+%{mxdir}/Tools/mxTools/*.pyc
+%{mxdir}/Tools/mxTools/*.pyo
+%attr(755,root,root) %{mxdir}/Tools/mxTools/*.so
 
 %files -n python-mx-Proxy
 %defattr(644,root,root,755)
+%doc mx/Proxy/Doc/*.html
+%dir %{mxdir}/Proxy
+%{mxdir}/Proxy/*.pyc
+%{mxdir}/Proxy/*.pyo
+
+%dir %{mxdir}/Proxy/mxProxy
+%{mxdir}/Proxy/mxProxy/*.pyc
+%{mxdir}/Proxy/mxProxy/*.pyo
+%attr(755,root,root) %{mxdir}/Proxy/mxProxy/*.so
 
 %files -n python-mx-BeeBase
 %defattr(644,root,root,755)
+%doc mx/BeeBase/Doc/*.html
+%dir %{mxdir}/BeeBase
+%{mxdir}/BeeBase/*.pyc
+%{mxdir}/BeeBase/*.pyo
+
+%dir %{mxdir}/BeeBase/mxBeeBase
+%{mxdir}/BeeBase/mxBeeBase/*.pyc
+%{mxdir}/BeeBase/mxBeeBase/*.pyo
+%attr(755,root,root) %{mxdir}/BeeBase/mxBeeBase/*.so
