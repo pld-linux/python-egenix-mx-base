@@ -55,7 +55,7 @@ Summary:	Date and time Python extension
 Summary(pl):	Obiekty daty i czasu dla jêzyka Python
 Group:		Libraries/Python
 %pyrequires_eq	python
-Requires:	python-%{module} = %{version}
+Requires:	python-%{module} = %{version}-%{release}
 
 %description -n python-mx-DateTime
 mxDateTime is an extension package that provides three new object
@@ -99,7 +99,7 @@ dacie i czasie.
 Summary:	Headers for date and time Python extension
 Summary(pl):	Nag³ówki modu³ów daty i czasu
 Group:		Development/Languages/Python
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description -n python-mx-DateTime-devel
 Headers for date and time Python extension.
@@ -112,7 +112,7 @@ Summary:	Efficient text manipulation extensions for Python
 Summary(pl):	Wydajne manipulowanie tekstem w jêzyku Python
 Group:		Libraries/Python
 %pyrequires_eq	python
-Requires:	python-%{module} = %{version}
+Requires:	python-%{module} = %{version}-%{release}
 
 %description -n python-mx-TextTools
 mxTextTools is an extension package for Python that provides several
@@ -144,7 +144,7 @@ Summary:	Stack implementation for Python
 Summary(pl):	Implementacja stosu dla jêzyka Python
 Group:		Libraries/Python
 %pyrequires_eq	python
-Requires:	python-%{module} = %{version}
+Requires:	python-%{module} = %{version}-%{release}
 
 %description -n python-mx-Stack
 mxStack is an extension package that provides a new object type called
@@ -162,7 +162,7 @@ Summary:	Queue implementation for Python
 Summary(pl):	Implementacja kolejki dla jêzyka Python
 Group:		Libraries/Python
 %pyrequires_eq	python
-Requires:	python-%{module} = %{version}
+Requires:	python-%{module} = %{version}-%{release}
 
 %description -n python-mx-Queue
 mxQueue is an extension package that provides a new object type called
@@ -180,7 +180,7 @@ Summary:	Some handy functions and objects which provides new builtins for Python
 Summary(pl):	Kilka u¿ytecznych klas i funkcji w postaci wew. mechanizmów Pythona
 Group:		Libraries/Python
 %pyrequires_eq	python
-Requires:	python-%{module} = %{version}
+Requires:	python-%{module} = %{version}-%{release}
 
 %description -n python-mx-Tools
 mxTools is an extension package that includes a collection of handy
@@ -212,7 +212,7 @@ Summary:	Support for Bastion like implementations for Python
 Summary(pl):	Wsparcie dla implementacji typu Bastion dla jêzyka Python
 Group:		Libraries/Python
 %pyrequires_eq	python
-Requires:	python-%{module} = %{version}
+Requires:	python-%{module} = %{version}-%{release}
 
 %description -n python-mx-Proxy
 mxProxy is an extension package that provides a new type that is
@@ -248,7 +248,7 @@ Summary:	High performance construction kit for disk based indexed databases (B+T
 Summary(pl):	Wysokiej jako¶ci pakiet do tworzenia indeksowanych baz danych (B+Tree)
 Group:		Libraries/Python
 %pyrequires_eq	python
-Requires:	python-%{module} = %{version}
+Requires:	python-%{module} = %{version}-%{release}
 
 %description -n python-mx-BeeBase
 mxBeeBase is a high performance construction kit for disk based
@@ -287,7 +287,10 @@ env CFLAGS="%{rpmcflags}" python setup.py build
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{py_incdir}/mx
-python setup.py install --root=$RPM_BUILD_ROOT
+python setup.py install \
+	--root=$RPM_BUILD_ROOT \
+	--install-purelib=%{py_sitedir}
+
 find $RPM_BUILD_ROOT%{py_sitedir} -name \*.h \
 	-exec mv {} $RPM_BUILD_ROOT%{py_incdir}/mx \;
 
