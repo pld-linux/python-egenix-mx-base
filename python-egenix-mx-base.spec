@@ -33,6 +33,17 @@ Pythonie.
 
 Ten pakiet zawiera podstawowe modu³y wymagane przez inne pakiety.
 
+%package devel
+Summary:	Basic header files for eGenix extensions
+Summary(pl):	Podstawowe pliki nag³ówkowe dla rozszerzeñ eGenix
+Group:		Development/Languages/Python
+
+%description devel
+Basic header files for eGenix extensions.
+
+%description devel -l pl
+Podstawowe pliki nag³ówkowe dla rozszerzeñ eGenix.
+
 %package -n python-mx-DateTime
 Summary:	Date and time Python extension
 Summary(pl):	Obiekty daty i czasu dla jêzyka Python
@@ -81,8 +92,8 @@ dacie i czasie.
 %package -n python-mx-DateTime-devel
 Summary:	Headers for date and time Python extension
 Summary(pl):	Nag³ówki modu³ów daty i czasu
-Group:		Libraries/Python
-Requires:	python-mx-DateTime = %{version}
+Group:		Development/Languages/Python
+Requires:	%{name}-devel = %{version}
 
 %description -n python-mx-DateTime-devel
 Headers for date and time Python extension.
@@ -268,7 +279,10 @@ env CFLAGS="%{rpmcflags}" python setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{py_incdir}/mx
 python setup.py install --root=$RPM_BUILD_ROOT
+find $RPM_BUILD_ROOT%{py_sitedir} -name \*.h \
+	-exec mv {} $RPM_BUILD_ROOT%{py_incdir}/mx \;
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -277,10 +291,15 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README mx/LICENSE mx/COPYRIGHT mx/Doc/mxLicense.html
 %dir %{mxdir}
+%dir %{py_incdir}/mx
 %{mxdir}/*.py[co]
 
 %dir %{mxdir}/Misc
 %{mxdir}/Misc/*.py[co]
+
+%files devel
+%defattr(644,root,root,755)
+%{py_incdir}/mx/mxh.h
 
 %files -n python-mx-DateTime
 %defattr(644,root,root,755)
@@ -294,8 +313,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n python-mx-DateTime-devel
 %defattr(644,root,root,755)
-%dir %{mxdir}/DateTime/mxDateTime
-%{mxdir}/DateTime/mxDateTime/*.h
+%{py_incdir}/mx/mxDateTime.h
 
 %files -n python-mx-TextTools
 %defattr(644,root,root,755)
