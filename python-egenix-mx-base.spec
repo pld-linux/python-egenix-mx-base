@@ -59,7 +59,7 @@ build upon. This is especially interesting for database applications
 which often have to deal with date/time values (the mxODBC package is
 one example of an extension using this interface).
 
-%description -l pl -n python-mx-DateTime
+%description -n python-mx-DateTime -l pl
 mxDateTime jest pakietem modu³ów, które definiuj± trzy nowe klasy -
 DateTime, DateTimeDelta oraz RelativeDateTime. Umo¿liwiaj± one
 przechowywanie oraz operowanie na dacie i czasie w bardziej naturalny
@@ -99,7 +99,7 @@ Applications include parsing structured text, finding and extracting
 text (either exact or using translation tables) and recombining
 strings to form new text.
 
-%description -l pl -n python-mx-TextTools
+%description -n python-mx-TextTools -l pl
 Pakiet mxTextTools dostarcza szereg u¿ytecznych typów i funkcji, które
 implementuj± wysokiej jako¶ci algorytmy do wyszukiwania i manipulacji
 tekstu. Programista dostaje wydajne (na poziomie kodu napisanego w
@@ -123,7 +123,7 @@ Stack. It works much like what you would expect from such a type,
 having .push() and .pop() methods and focusses on obtaining maximum
 speed at low memory costs.
 
-%description -l pl -n python-mx-Stack
+%description -n python-mx-Stack -l pl
 Pakiet mxStack zawiera implementacjê stosu, która zawiera typowe
 metody takie jak pop() czy push(). Mechanizm zosta³ napisany tak by,
 przy minimalnym zu¿yciu pamiêci, by³ bardzo wydajny.
@@ -141,7 +141,7 @@ Queue. It works much like what you would expect from such a type,
 having .push() and .pop() methods and focusses on obtaining maximum
 speed at low memory costs.
 
-%description -l pl -n python-mx-Queue
+%description -n python-mx-Queue -l pl
 Pakiet mxQueue zawiera implementacjê kolejki, która zawiera typowe
 metody takie jak pop() czy push(). Mechanizm zosta³ napisany tak by,
 przy minimalnym zu¿yciu pamiêci, by³ bardzo wydajny.
@@ -165,7 +165,7 @@ line import mx.Tools.NewBuiltins to your site.py script and they will
 be available to all users at your site as if they were installed in
 the Python interpreter itself.
 
-%description -l pl -n python-mx-Tools
+%description -n python-mx-Tools -l pl
 Pakiet mxTools zawiera kilka u¿ytecznych klas i funkcji, które daj±
 wiêcej mo¿liwo¶ci programi¶cie, w postaci wewnêtrznych mechanizmów
 jêzyka Python.
@@ -200,7 +200,7 @@ The latest version adds a very interesting new feature: weak
 references which help you work with circular references in a way that
 doesn't cause memory leakage in a Python system.
 
-%description -l pl -n python-mx-Proxy
+%description -n python-mx-Proxy -l pl
 Pakiet mxProxy dostarcza nowe klasy, które implementuj± funkcjonalno¶æ
 typu Bastion bez potrzeby ograniczania ¶rodowiska, w którym jest
 wykonywana aplikacja.
@@ -235,7 +235,7 @@ locking for multi process access. Indexes use a high performance
 optimized B+Tree implementation built on top of Thomas Niemann's
 Cookbook B+Tree implementation.
 
-%description -l pl -n python-mx-BeeBase
+%description -n python-mx-BeeBase -l pl
 mxBeeBase jest wysokiej jako¶ci pakietem do tworzenia indeksowanych
 baz danych. Zawiera komponenty, które mo¿na razem ³±czyæ w celu
 zbudowania w³asnej bazy. Obecny limit ilo¶ci danych wynosi 2GB (max.
