@@ -7,7 +7,7 @@ Summary:	eGenix mx-Extensions for Python - BASE package
 Name:		python-%{module}
 Version:	2.0.1
 Release:	1
-URL:		http://www.lemburg.com/python/mxExtensions.html
+URL:		http://www.lemburg.com/python/eGenix-mx-Extensions.html
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
@@ -27,6 +27,9 @@ and is needed by all other add-on packages of the series.
 
 This software is brought to you by eGenix.com and distributed under
 the eGenix.com Public License.
+
+%description -l pl
+N/A
 
 %package -n python-mx-DateTime
 Summary:	Date and time Python extension
@@ -102,14 +105,14 @@ N/A
 
 %package -n python-mx-Queue
 Summary:	Queue implementation for Python
-Summary(pl):	Implementacja stosu dla jêzyka Python
+Summary(pl):	Implementacja kolejki dla jêzyka Python
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
 Group(pl):	Programowanie/Jêzyki/Python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-Queue
-N/A
+N/A    Will be available in next package version (2.0.2? 2.0.3?).
 
 %description -l pl -n python-mx-Queue
 N/A
