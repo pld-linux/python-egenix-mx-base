@@ -3,19 +3,19 @@
 %include	/usr/lib/rpm/macros.python
 %define		module egenix-mx-base
 %define		mxdir %{py_sitedir}/mx
-%define		beta_num 5
-%define		fn_sufix 0b%{beta_num}
+#%%define		beta_num 5
+#%%define		fn_sufix 0b%{beta_num}
 
 Summary:	eGenix mx-Extensions for Python
 Summary(pl):	eGenix mx-Extensions dla jêzyka Python
 Name:		python-%{module}
-Version:	2.1
-Release:	%{fn_sufix}.2
+Version:	2.0.5
+Release:	7
 License:	distributable
 Group:		Libraries/Python
-# Source0:	http://www.lemburg.com/python/%{module}-%{version}.tar.gz
-Source0:	http://www.egenix.com/files/python/%{module}-%{version}.%{fn_sufix}.tar.gz
-# Source0-md5:	4d062e7b644edbe7e9ae8698e23e60f1
+# Source0:	http://www.egenix.com/files/python/%{module}-%{version}.%{fn_sufix}.tar.gz
+Source0:	http://www.egenix.com/files/python/%{module}-%{version}.tar.gz
+# Source0-md5:	a793a8fd2d5f646a2fb683d2d967a16b
 # URL:		http://www.lemburg.com/python/eGenix-mx-Extensions.html
 URL:		http://www.egenix.com/mailman-archives/egenix-users/2002-August/000078.html
 BuildRequires:	python-devel >= 2.2.2
@@ -278,7 +278,8 @@ wydajne B-drzewa zaimplementowane na podstawie Cookbook B+Tree Thomasa
 Newmanna.
 
 %prep
-%setup -q -n %{module}-%{version}.%{fn_sufix}
+#%%setup -q -n %{module}-%{version}.%{fn_sufix}
+%setup -q -n %{module}-%{version}
 
 %build
 env CFLAGS="%{rpmcflags}" python setup.py build
