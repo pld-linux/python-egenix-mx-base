@@ -15,7 +15,7 @@ URL:		http://www.lemburg.com/python/eGenix-mx-Extensions.html
 BuildRequires:	python-devel >= 2.2
 BuildRequires:	python-modules >= 2.2
 BuildRequires:	rpm-pythonprov
-%requires_eq	python
+%pyrequires_eq	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,7 +37,7 @@ Ten pakiet zawiera podstawowe modu³y wymagane przez inne pakiety.
 Summary:	Date and time Python extension
 Summary(pl):	Obiekty daty i czasu dla jêzyka Python
 Group:		Libraries/Python
-%requires_eq	python
+%pyrequires_eq	python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-DateTime
@@ -82,7 +82,7 @@ dacie i czasie.
 Summary:	Efficient text manipulation extensions for Python
 Summary(pl):	Wydajne manipulowanie tekstem w jêzyku Python
 Group:		Libraries/Python
-%requires_eq	python
+%pyrequires_eq	python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-TextTools
@@ -114,7 +114,7 @@ manipulowaæ tekstem.
 Summary:	Stack implementation for Python
 Summary(pl):	Implementacja stosu dla jêzyka Python
 Group:		Libraries/Python
-%requires_eq	python
+%pyrequires_eq	python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-Stack
@@ -132,7 +132,7 @@ przy minimalnym zu¿yciu pamiêci, by³ bardzo wydajny.
 Summary:	Queue implementation for Python
 Summary(pl):	Implementacja kolejki dla jêzyka Python
 Group:		Libraries/Python
-%requires_eq	python
+%pyrequires_eq	python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-Queue
@@ -150,7 +150,7 @@ przy minimalnym zu¿yciu pamiêci, by³ bardzo wydajny.
 Summary:	Some handy functions and objects which provides new builtins for Python
 Summary(pl):	Kilka u¿ytecznych klas i funkcji w postaci wew. mechanizmów Pythona
 Group:		Libraries/Python
-%requires_eq	python
+%pyrequires_eq	python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-Tools
@@ -182,7 +182,7 @@ jêzyk Python.
 Summary:	Support for Bastion like implementations for Python
 Summary(pl):	Wsparcie dla implementacji typu Bastion dla jêzyka Python
 Group:		Libraries/Python
-%requires_eq	python
+%pyrequires_eq	python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-Proxy
@@ -218,7 +218,7 @@ powoduj± wycieków pamiêci w przypadku referencji zapêtlonych.
 Summary:	High performance construction kit for disk based indexed databases (B+Tree)
 Summary(pl):	Wysokiej jako¶ci pakiet do tworzenia indeksowanych baz danych (B+Tree)
 Group:		Libraries/Python
-%requires_eq	python
+%pyrequires_eq	python
 Requires:	python-%{module} = %{version}
 
 %description -n python-mx-BeeBase
