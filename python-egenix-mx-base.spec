@@ -1,7 +1,7 @@
 %include	/usr/lib/rpm/macros.python
 
-%define module egenix-mx-base
-%define mxdir %{py_sitedir}/mx
+%define		module egenix-mx-base
+%define		mxdir %{py_sitedir}/mx
 
 Summary:	eGenix mx-Extensions for Python
 Summary(pl):	eGenix mx-Extensions dla jêzyka Python
@@ -12,8 +12,8 @@ License:	distributable
 Group:		Libraries/Python
 Source0:	http://www.lemburg.com/python/%{module}-%{version}.tar.gz
 URL:		http://www.lemburg.com/python/eGenix-mx-Extensions.html
-BuildRequires:	python-devel >= 2.2
-BuildRequires:	python-modules >= 2.2
+BuildRequires:	python-devel >= 2.2.1
+BuildRequires:	python-modules >= 2.2.1
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
