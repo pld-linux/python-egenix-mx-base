@@ -15,6 +15,7 @@ Group(pl):	Programowanie/Jêzyki/Python
 Source0:	http://www.lemburg.com/python/%{module}-%{version}.tar.gz
 URL:		http://www.lemburg.com/python/eGenix-mx-Extensions.html
 BuildRequires:	python-devel >= 2.1
+BuildRequires:	rpm-pythonprov
 %requires_eq	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
