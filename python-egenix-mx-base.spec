@@ -20,7 +20,6 @@ URL:		http://www.egenix.com/mailman-archives/egenix-users/2002-August/000078.htm
 BuildRequires:	python
 BuildRequires:	python-devel >= 2.2.2
 BuildRequires:	python-modules >= 2.2.2
-BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
