@@ -6,8 +6,8 @@
 Summary:	eGenix mx-Extensions for Python
 Summary(pl):	eGenix mx-Extensions dla jêzyka Python
 Name:		python-%{module}
-Version:	2.0.3
-Release:	5
+Version:	2.0.4
+Release:	1
 License:	distributable
 Group:		Libraries/Python
 Source0:	http://www.lemburg.com/python/%{module}-%{version}.tar.gz
@@ -77,6 +77,19 @@ bardzo wygodny interfejs w C, który mo¿e byæ wykorzystany do tworzenia
 innych rozszerzeñ (np.: pakiet mxODBC). W szczególno¶ci, cecha ta jest
 interesuj±ca w przypadku aplikacji bazodanowych, które operuj± na
 dacie i czasie.
+
+%package -n python-mx-DateTime-devel
+Summary:	Headers for date and time Python extension
+Summary(pl):	Nag³ówki dla rozszerzeñ mx ( daty i czasu dla jêzyka Python)
+Group:          Libraries/Python
+Requires:	python-mx-DateTime = %{version}
+
+%description -n python-mx-DateTime-devel
+Headers for date and time Python extension. Required to build some packages.
+
+%description -n python-mx-DateTime-devel -l pl
+Nag³ówki dla biblioteki mx (daty i czasu). Wymagane do budowania pewnych
+pakietów.
 
 %package -n python-mx-TextTools
 Summary:	Efficient text manipulation extensions for Python
@@ -279,6 +292,11 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{mxdir}/DateTime/mxDateTime
 %{mxdir}/DateTime/mxDateTime/*.py[co]
 %attr(755,root,root) %{mxdir}/DateTime/mxDateTime/*.so
+
+%files -n python-mx-DateTime-devel
+%defattr(644,root,root,755)
+%dir %{mxdir}/DateTime/mxDateTime
+%{mxdir}/DateTime/mxDateTime/*.h
 
 %files -n python-mx-TextTools
 %defattr(644,root,root,755)
