@@ -14,6 +14,7 @@ Group(de):	Entwicklung/Sprachen/Python
 Group(es):	Desarrollo/Lenguages/Python
 Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
+Group(pt):	Desenvolvimento/Línguas/Python
 Source0:	http://www.lemburg.com/python/%{module}-%{version}.tar.gz
 URL:		http://www.lemburg.com/python/eGenix-mx-Extensions.html
 BuildRequires:	python-devel >= 2.2
@@ -45,6 +46,7 @@ Group(de):	Entwicklung/Sprachen/Python
 Group(es):	Desarrollo/Lenguages/Python
 Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
+Group(pt):	Desenvolvimento/Línguas/Python
 %requires_eq	python
 Requires:	python-%{module} = %{version}
 
@@ -94,6 +96,7 @@ Group(de):	Entwicklung/Sprachen/Python
 Group(es):	Desarrollo/Lenguages/Python
 Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
+Group(pt):	Desenvolvimento/Línguas/Python
 %requires_eq	python
 Requires:	python-%{module} = %{version}
 
@@ -130,6 +133,7 @@ Group(de):	Entwicklung/Sprachen/Python
 Group(es):	Desarrollo/Lenguages/Python
 Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
+Group(pt):	Desenvolvimento/Línguas/Python
 %requires_eq	python
 Requires:	python-%{module} = %{version}
 
@@ -152,6 +156,7 @@ Group(de):	Entwicklung/Sprachen/Python
 Group(es):	Desarrollo/Lenguages/Python
 Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
+Group(pt):	Desenvolvimento/Línguas/Python
 %requires_eq	python
 Requires:	python-%{module} = %{version}
 
@@ -174,6 +179,7 @@ Group(de):	Entwicklung/Sprachen/Python
 Group(es):	Desarrollo/Lenguages/Python
 Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
+Group(pt):	Desenvolvimento/Línguas/Python
 %requires_eq	python
 Requires:	python-%{module} = %{version}
 
@@ -210,6 +216,7 @@ Group(de):	Entwicklung/Sprachen/Python
 Group(es):	Desarrollo/Lenguages/Python
 Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
+Group(pt):	Desenvolvimento/Línguas/Python
 %requires_eq	python
 Requires:	python-%{module} = %{version}
 
@@ -250,6 +257,7 @@ Group(de):	Entwicklung/Sprachen/Python
 Group(es):	Desarrollo/Lenguages/Python
 Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
+Group(pt):	Desenvolvimento/Línguas/Python
 %requires_eq	python
 Requires:	python-%{module} = %{version}
 
