@@ -7,7 +7,7 @@ Summary:	eGenix mx-Extensions for Python
 Summary(pl):	eGenix mx-Extensions dla jêzyka Python
 Name:		python-%{module}
 Version:	2.0.3
-Release:	3
+Release:	5
 License:	distributable
 Group:		Libraries/Python
 Source0:	http://www.lemburg.com/python/%{module}-%{version}.tar.gz
@@ -258,14 +258,12 @@ env CFLAGS="%{rpmcflags}" python setup.py build
 rm -rf $RPM_BUILD_ROOT
 python setup.py install --root=$RPM_BUILD_ROOT
 
-gzip -9nf README mx/LICENSE mx/COPYRIGHT
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz mx/*.gz mx/Doc/mxLicense.html
+%doc README mx/LICENSE mx/COPYRIGHT mx/Doc/mxLicense.html
 %dir %{mxdir}
 %{mxdir}/*.py[co]
 
