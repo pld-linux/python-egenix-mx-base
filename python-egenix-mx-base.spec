@@ -1,6 +1,5 @@
 # TODO make examples package
 
-%include	/usr/lib/rpm/macros.python
 %define		module	egenix-mx-base
 %define		mxdir	%{py_sitedir}/mx
 #%%define		beta_num	5
