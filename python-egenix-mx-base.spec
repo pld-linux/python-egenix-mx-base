@@ -3,8 +3,8 @@
 %include	/usr/lib/rpm/macros.python
 %define		module egenix-mx-base
 %define		mxdir %{py_sitedir}/mx
-%define		beta_num 5 
-%define		fn_sufix 0b%{beta_num} 
+%define		beta_num 5
+%define		fn_sufix 0b%{beta_num}
 
 Summary:	eGenix mx-Extensions for Python
 Summary(pl):	eGenix mx-Extensions dla jêzyka Python
