@@ -1,7 +1,7 @@
 
+%include /usr/lib/rpm/macros.python
 %define module egenix-mx-base
-%define python_sitepkgsdir %(echo `python -c "import sys; print (sys.prefix + '/lib/python' + sys.version[:3] + '/site-packages/')"`)
-%define mxdir %{python_sitepkgsdir}/mx
+%define mxdir %{py_sitedir}/mx
 
 Summary:	eGenix mx-Extensions for Python
 Summary(pl):	eGenix mx-Extensions dla jêzyka Python
