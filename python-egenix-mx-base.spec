@@ -10,7 +10,7 @@ Summary:	eGenix mx-Extensions for Python
 Summary(pl):	eGenix mx-Extensions dla jêzyka Python
 Name:		python-%{module}
 Version:	2.1
-Release:	%{fn_sufix}.1
+Release:	%{fn_sufix}.2
 License:	distributable
 Group:		Libraries/Python
 # Source0:	http://www.lemburg.com/python/%{module}-%{version}.tar.gz
