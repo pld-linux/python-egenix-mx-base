@@ -1,16 +1,16 @@
-%include	/usr/lib/rpm/macros.python
+# TODO make examples package
 
+%include	/usr/lib/rpm/macros.python
 %define		module egenix-mx-base
 %define		mxdir %{py_sitedir}/mx
 %define		beta_num 5 
-#2.1.0b5
 %define		fn_sufix 0b%{beta_num} 
 
 Summary:	eGenix mx-Extensions for Python
 Summary(pl):	eGenix mx-Extensions dla jêzyka Python
 Name:		python-%{module}
 Version:	2.1
-Release:	%{fn_sufix}
+Release:	%{fn_sufix}.1
 License:	distributable
 Group:		Libraries/Python
 # Source0:	http://www.lemburg.com/python/%{module}-%{version}.tar.gz
