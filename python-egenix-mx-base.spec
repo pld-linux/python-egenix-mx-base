@@ -1,5 +1,5 @@
+%include	/usr/lib/rpm/macros.python
 
-%include /usr/lib/rpm/macros.python
 %define module egenix-mx-base
 %define mxdir %{py_sitedir}/mx
 
@@ -7,14 +7,16 @@ Summary:	eGenix mx-Extensions for Python
 Summary(pl):	eGenix mx-Extensions dla jêzyka Python
 Name:		python-%{module}
 Version:	2.0.1
-Release:	4
+Release:	5
 License:	distributable
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
+Group(es):	Desarrollo/Lenguages/Python
+Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
 Source0:	http://www.lemburg.com/python/%{module}-%{version}.tar.gz
 URL:		http://www.lemburg.com/python/eGenix-mx-Extensions.html
-BuildRequires:	python-devel >= 2.1
+BuildRequires:	python-devel >= 2.2
 BuildRequires:	rpm-pythonprov
 %requires_eq	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -39,6 +41,8 @@ Summary:	Date and time Python extension
 Summary(pl):	Obiekty daty i czasu dla jêzyka Python
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
+Group(es):	Desarrollo/Lenguages/Python
+Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
 %requires_eq	python
 Requires:	python-%{module} = %{version}
@@ -86,6 +90,8 @@ Summary:	Efficient text manipulation extensions for Python
 Summary(pl):	Wydajne manipulowanie tekstem w jêzyku Python
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
+Group(es):	Desarrollo/Lenguages/Python
+Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
 %requires_eq	python
 Requires:	python-%{module} = %{version}
@@ -120,6 +126,8 @@ Summary:	Stack implementation for Python
 Summary(pl):	Implementacja stosu dla jêzyka Python
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
+Group(es):	Desarrollo/Lenguages/Python
+Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
 %requires_eq	python
 Requires:	python-%{module} = %{version}
@@ -140,6 +148,8 @@ Summary:	Queue implementation for Python
 Summary(pl):	Implementacja kolejki dla jêzyka Python
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
+Group(es):	Desarrollo/Lenguages/Python
+Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
 %requires_eq	python
 Requires:	python-%{module} = %{version}
@@ -160,6 +170,8 @@ Summary:	Some handy functions and objects which provides new builtins for Python
 Summary(pl):	Kilka u¿ytecznych klas i funkcji w postaci wew. mechanizmów Pythona
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
+Group(es):	Desarrollo/Lenguages/Python
+Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
 %requires_eq	python
 Requires:	python-%{module} = %{version}
@@ -194,6 +206,8 @@ Summary:	Support for Bastion like implementations for Python
 Summary(pl):	Wsparcie dla implementacji typu Bastion dla jêzyka Python
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
+Group(es):	Desarrollo/Lenguages/Python
+Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
 %requires_eq	python
 Requires:	python-%{module} = %{version}
@@ -232,6 +246,8 @@ Summary:	High performance construction kit for disk based indexed databases (B+T
 Summary(pl):	Wysokiej jako¶ci pakiet do tworzenia indeksowanych baz danych (B+Tree)
 Group:		Development/Languages/Python
 Group(de):	Entwicklung/Sprachen/Python
+Group(es):	Desarrollo/Lenguages/Python
+Group(fr):	Development/Langues/Python
 Group(pl):	Programowanie/Jêzyki/Python
 %requires_eq	python
 Requires:	python-%{module} = %{version}
