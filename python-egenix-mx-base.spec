@@ -80,16 +80,15 @@ dacie i czasie.
 
 %package -n python-mx-DateTime-devel
 Summary:	Headers for date and time Python extension
-Summary(pl):	Nag³ówki dla rozszerzeñ mx ( daty i czasu dla jêzyka Python)
-Group:          Libraries/Python
+Summary(pl):	Nag³ówki modu³ów daty i czasu
+Group:		Libraries/Python
 Requires:	python-mx-DateTime = %{version}
 
 %description -n python-mx-DateTime-devel
-Headers for date and time Python extension. Required to build some packages.
+Headers for date and time Python extension.
 
 %description -n python-mx-DateTime-devel -l pl
-Nag³ówki dla biblioteki mx (daty i czasu). Wymagane do budowania pewnych
-pakietów.
+Nag³ówki dla modu³ów daty i czasu.
 
 %package -n python-mx-TextTools
 Summary:	Efficient text manipulation extensions for Python
