@@ -14,9 +14,8 @@ Group:		Libraries/Python
 Source0:	http://www.egenix.com/files/python/%{module}-%{version}.tar.gz
 # Source0-md5:	a793a8fd2d5f646a2fb683d2d967a16b
 URL:		http://www.egenix.com/files/python/eGenix-mx-Extensions.html
-BuildRequires:	python
 BuildRequires:	python-devel >= 2.2.2
-BuildRequires:	python-modules >= 2.2.2
+BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
