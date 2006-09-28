@@ -7,7 +7,7 @@ Summary:	eGenix mx-Extensions for Python
 Summary(pl):	eGenix mx-Extensions dla jêzyka Python
 Name:		python-%{module}
 Version:	2.0.6
-Release:	2
+Release:	3
 License:	distributable
 Group:		Libraries/Python
 #Source0Download: http://www.egenix.com/files/python/eGenix-mx-Extensions.html
