@@ -4,7 +4,7 @@
 %define		mxdir	%{py_sitedir}/mx
 
 Summary:	eGenix mx-Extensions for Python
-Summary(pl.UTF-8):   eGenix mx-Extensions dla języka Python
+Summary(pl.UTF-8):	eGenix mx-Extensions dla języka Python
 Name:		python-%{module}
 Version:	2.0.6
 Release:	3
@@ -36,7 +36,7 @@ Ten pakiet zawiera podstawowe moduły wymagane przez inne pakiety.
 
 %package devel
 Summary:	Basic header files for eGenix extensions
-Summary(pl.UTF-8):   Podstawowe pliki nagłówkowe dla rozszerzeń eGenix
+Summary(pl.UTF-8):	Podstawowe pliki nagłówkowe dla rozszerzeń eGenix
 Group:		Development/Languages/Python
 Requires:	%{name} = %{version}-%{release}
 
@@ -48,7 +48,7 @@ Podstawowe pliki nagłówkowe dla rozszerzeń eGenix.
 
 %package -n python-mx-BeeBase
 Summary:	High performance construction kit for disk based indexed databases (B+Tree)
-Summary(pl.UTF-8):   Wysokiej jakości pakiet do tworzenia indeksowanych baz danych (B+Tree)
+Summary(pl.UTF-8):	Wysokiej jakości pakiet do tworzenia indeksowanych baz danych (B+Tree)
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
@@ -81,7 +81,7 @@ Newmanna.
 
 %package -n python-mx-DateTime
 Summary:	Date and time Python extension
-Summary(pl.UTF-8):   Obiekty daty i czasu dla języka Python
+Summary(pl.UTF-8):	Obiekty daty i czasu dla języka Python
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
@@ -125,7 +125,7 @@ dacie i czasie.
 
 %package -n python-mx-DateTime-devel
 Summary:	Header file for DateTime Python extension
-Summary(pl.UTF-8):   Plik nagłówkowy rozszerzenia DateTime dla Pythona
+Summary(pl.UTF-8):	Plik nagłówkowy rozszerzenia DateTime dla Pythona
 Group:		Development/Languages/Python
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -137,7 +137,7 @@ Plik nagłówkowy rozszerzenia DateTime dla Pythona.
 
 %package -n python-mx-Proxy
 Summary:	Support for Bastion like implementations for Python
-Summary(pl.UTF-8):   Wsparcie dla implementacji typu Bastion dla języka Python
+Summary(pl.UTF-8):	Wsparcie dla implementacji typu Bastion dla języka Python
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
@@ -172,7 +172,7 @@ powodują wycieków pamięci w przypadku referencji zapętlonych.
 
 %package -n python-mx-Queue
 Summary:	Queue implementation for Python
-Summary(pl.UTF-8):   Implementacja kolejki dla języka Python
+Summary(pl.UTF-8):	Implementacja kolejki dla języka Python
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
@@ -189,7 +189,7 @@ przy minimalnym zużyciu pamięci, był bardzo wydajny.
 
 %package -n python-mx-Stack
 Summary:	Stack implementation for Python
-Summary(pl.UTF-8):   Implementacja stosu dla języka Python
+Summary(pl.UTF-8):	Implementacja stosu dla języka Python
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
@@ -206,7 +206,7 @@ przy minimalnym zużyciu pamięci, był bardzo wydajny.
 
 %package -n python-mx-TextTools
 Summary:	Efficient text manipulation extensions for Python
-Summary(pl.UTF-8):   Wydajne manipulowanie tekstem w języku Python
+Summary(pl.UTF-8):	Wydajne manipulowanie tekstem w języku Python
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
@@ -237,7 +237,7 @@ manipulować tekstem.
 
 %package -n python-mx-Tools
 Summary:	Some handy functions and objects which provides new builtins for Python
-Summary(pl.UTF-8):   Kilka użytecznych klas i funkcji w postaci wew. mechanizmów Pythona
+Summary(pl.UTF-8):	Kilka użytecznych klas i funkcji w postaci wew. mechanizmów Pythona
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
