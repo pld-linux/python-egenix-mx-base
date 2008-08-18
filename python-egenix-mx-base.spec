@@ -6,15 +6,15 @@
 Summary:	eGenix mx-Extensions for Python
 Summary(pl.UTF-8):	eGenix mx-Extensions dla języka Python
 Name:		python-%{module}
-Version:	2.0.6
-Release:	4
+Version:	3.1.1
+Release:	1
 License:	distributable
 Group:		Libraries/Python
 #Source0Download: http://www.egenix.com/files/python/eGenix-mx-Extensions.html
 Source0:	http://www.egenix.com/files/python/%{module}-%{version}.tar.gz
-# Source0-md5:	66841151728a06f92d0b8dd2ed317a29
+# Source0-md5:	d0f3b1adca33a68867bf50f000060cd6
 URL:		http://www.egenix.com/files/python/eGenix-mx-Extensions.html
-BuildRequires:	python-devel >= 2.2.2
+BuildRequires:	python-devel >= 2.5.0
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-libs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -266,6 +266,36 @@ odpowiedniego skryptu (site.py) i zdefiniowane funkcje oraz klasy będą
 widoczne dla wszystkich użytkowników tak, jak by były wbudowane w
 język Python.
 
+%package -n python-mx-UID
+Summary:	Fast Unique Identifiers for Python
+Summary(pl.UTF-8):	Szybkie Unikalne Identyfikatory dla Pythona
+Group:		Libraries/Python
+Requires:	%{name} = %{version}-%{release}
+
+%description -n python-mx-UID
+UID is an extension package that provides a fast mechanism for
+generating unique identification strings (UIDs).
+
+%description -n python-mx-UID -l pl.UTF-8
+Pakiet UID dostarcza szybki mechanizm do generowania unikalnych ciągów
+znaków (UID).
+
+%package -n python-mx-URL
+Summary:	Flexible URL Data-Type for Python
+Summary(pl.UTF-8):	Elastyczny typ danych URL dla Pythona
+Group:		Libraries/Python
+Requires:	%{name} = %{version}-%{release}
+
+%description -n python-mx-URL
+URL package provides a new datatype for storing and manipulating URL
+values as well as a few helpers related to URL building, encoding and
+decoding.
+
+%description -n python-mx-Stack -l pl.UTF-8
+Pakiet URL dostarcza nowy typ danych do przechowywania i manipulowania
+wartościami URL jak również kilka pomocniczych elementów służących do
+tworzenia, kodowania i dekodowania adresów URL.
+
 %prep
 %setup -q -n %{module}-%{version}
 
@@ -288,12 +318,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README mx/LICENSE mx/COPYRIGHT mx/Doc/mxLicense.html
+%doc README mx/LICENSE mx/COPYRIGHT mx/Doc/*License.txt
 %dir %{mxdir}
 %dir %{py_incdir}/mx
 %{mxdir}/*.py[co]
 %dir %{mxdir}/Misc
 %{mxdir}/Misc/*.py[co]
+%{py_sitedir}/*.egg-info
 
 %files devel
 %defattr(644,root,root,755)
@@ -301,8 +332,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n python-mx-BeeBase
 %defattr(644,root,root,755)
-# this COPYRIGHT differs from others
-%doc mx/BeeBase/Doc/*.html mx/BeeBase/COPYRIGHT
+%doc mx/BeeBase/Doc/*.pdf
 %dir %{mxdir}/BeeBase
 %{mxdir}/BeeBase/*.py[co]
 %dir %{mxdir}/BeeBase/mxBeeBase
@@ -315,7 +345,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n python-mx-DateTime
 %defattr(644,root,root,755)
-%doc mx/DateTime/Doc/*.html
+%doc mx/DateTime/Doc/*.pdf
 %dir %{mxdir}/DateTime
 %{mxdir}/DateTime/*.py[co]
 %dir %{mxdir}/DateTime/mxDateTime
@@ -328,7 +358,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n python-mx-Proxy
 %defattr(644,root,root,755)
-%doc mx/Proxy/Doc/*.html
+%doc mx/Proxy/Doc/*.pdf
 %dir %{mxdir}/Proxy
 %{mxdir}/Proxy/*.py[co]
 %dir %{mxdir}/Proxy/mxProxy
@@ -340,7 +370,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n python-mx-Queue
 %defattr(644,root,root,755)
-%doc mx/Queue/Doc/*.html
+%doc mx/Queue/Doc/*.pdf
 %dir %{mxdir}/Queue
 %{mxdir}/Queue/*.py[co]
 %dir %{mxdir}/Queue/mxQueue
@@ -352,7 +382,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n python-mx-Stack
 %defattr(644,root,root,755)
-%doc mx/Stack/Doc/*.html
+%doc mx/Stack/Doc/*.pdf
 %dir %{mxdir}/Stack
 %{mxdir}/Stack/*.py[co]
 %dir %{mxdir}/Stack/mxStack
@@ -361,7 +391,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n python-mx-TextTools
 %defattr(644,root,root,755)
-%doc mx/TextTools/Doc/*.html
+%doc mx/TextTools/Doc/*.pdf
 %dir %{mxdir}/TextTools
 %{mxdir}/TextTools/*.py[co]
 %dir %{mxdir}/TextTools/mxTextTools
@@ -377,7 +407,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n python-mx-Tools
 %defattr(644,root,root,755)
-%doc mx/Tools/Doc/*.html
+%doc mx/Tools/Doc/*.pdf
 %dir %{mxdir}/Tools
 %{mxdir}/Tools/*.py[co]
 %dir %{mxdir}/Tools/mxTools
@@ -386,3 +416,27 @@ rm -rf $RPM_BUILD_ROOT
 
 # -devel if needed
 #%{py_incdir}/mx/mxTools.h
+
+%files -n python-mx-UID
+%defattr(644,root,root,755)
+%doc mx/UID/Doc/*.pdf
+%dir %{mxdir}/UID
+%{mxdir}/UID/*.py[co]
+%dir %{mxdir}/UID/mxUID
+%{mxdir}/UID/mxUID/*.py[co]
+%attr(755,root,root) %{mxdir}/UID/mxUID/*.so
+
+# -devel if needed
+#%{py_incdir}/mx/mxUID.h
+
+%files -n python-mx-URL
+%defattr(644,root,root,755)
+%doc mx/URL/Doc/*.pdf
+%dir %{mxdir}/URL
+%{mxdir}/URL/*.py[co]
+%dir %{mxdir}/URL/mxURL
+%{mxdir}/URL/mxURL/*.py[co]
+%attr(755,root,root) %{mxdir}/URL/mxURL/*.so
+
+# -devel if needed
+#%{py_incdir}/mx/mxURL.h
