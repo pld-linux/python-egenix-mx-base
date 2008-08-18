@@ -14,7 +14,7 @@ Group:		Libraries/Python
 Source0:	http://www.egenix.com/files/python/%{module}-%{version}.tar.gz
 # Source0-md5:	d0f3b1adca33a68867bf50f000060cd6
 URL:		http://www.egenix.com/files/python/eGenix-mx-Extensions.html
-BuildRequires:	python-devel >= 2.5.0
+BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-libs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -268,7 +268,7 @@ język Python.
 
 %package -n python-mx-UID
 Summary:	Fast Unique Identifiers for Python
-Summary(pl.UTF-8):	Szybkie Unikalne Identyfikatory dla Pythona
+Summary(pl.UTF-8):	Szybkie unikalne identyfikatory (UID) dla Pythona
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
