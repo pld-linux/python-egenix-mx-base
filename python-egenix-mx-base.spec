@@ -291,7 +291,7 @@ URL package provides a new datatype for storing and manipulating URL
 values as well as a few helpers related to URL building, encoding and
 decoding.
 
-%description -n python-mx-Stack -l pl.UTF-8
+%description -n python-mx-URL -l pl.UTF-8
 Pakiet URL dostarcza nowy typ danych do przechowywania i manipulowania
 wartościami URL jak również kilka pomocniczych elementów służących do
 tworzenia, kodowania i dekodowania adresów URL.
