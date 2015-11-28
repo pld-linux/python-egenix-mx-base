@@ -300,13 +300,12 @@ tworzenia, kodowania i dekodowania adresów URL.
 %setup -q -n %{module}-%{version}
 
 %build
-env CFLAGS="%{rpmcflags}" python setup.py build
+env CFLAGS="%{rpmcflags}" %py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{py_incdir}/mx
-python setup.py install \
-	--root=$RPM_BUILD_ROOT \
+%py_install \
 	--install-purelib=%{py_sitedir}
 
 find $RPM_BUILD_ROOT%{py_sitedir} -name \*.h \
